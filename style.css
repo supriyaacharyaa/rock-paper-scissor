@@ -61,3 +61,66 @@ h2{
     display: flex;
    justify-content: center;
 }
+
+@media (max-width: 768px) {
+  .choices {
+    gap: 1.5rem;       /* less gap so it fits nicely */
+    justify-content: center;
+  }
+
+  .choice {
+    height: 130px;
+    width: 130px;
+  }
+
+  .choice img {
+    height: 120px;
+    width: 120px;
+  }
+}
+
+/* Mobile: smaller images and allow wrapping so images never overflow */
+@media (max-width: 480px) {
+  .choices {
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;   /* lets items wrap instead of overflowing */
+  }
+
+  .choice {
+    height: 110px;
+    width: 110px;
+    margin: 0.25rem;   /* small breathing space when wrapped */
+  }
+
+  .choice img {
+    height: 100px;
+    width: 100px;
+  }
+}
+/* ---------- Message section responsive tweaks ---------- */
+
+/* Tablet */
+@media (max-width: 768px) {
+  #msg {
+    font-size: 1.6rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .message {
+    margin-top: 3.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  #msg {
+    font-size: 1.3rem;
+    padding: 0.7rem 1.2rem;
+    text-align: center;
+  }
+
+  .message {
+    margin-top: 2.5rem;
+  }
+}
